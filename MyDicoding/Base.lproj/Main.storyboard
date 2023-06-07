@@ -45,6 +45,9 @@
                                         <color key="backgroundColor" name="DicodingColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="setFollowed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5p8-6P-Bvr"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="D3k-A2-91W">
                                 <rect key="frame" x="12" y="263.5" width="296" height="205"/>
@@ -140,6 +143,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="followedButton" destination="QQr-Ed-dwQ" id="Pvw-1G-IuI"/>
                         <outlet property="profileImageView" destination="pbS-up-G6X" id="a73-NQ-2Q1"/>
                     </connections>
                 </viewController>

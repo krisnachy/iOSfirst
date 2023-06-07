@@ -8,8 +8,9 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var followedButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,6 +23,13 @@ class ProfileViewController: UIViewController {
         profileImageView.layer.borderColor = UIColor.black.cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.height/2
         profileImageView.clipsToBounds = true
+    }
+    
+    private var isFollow = false
+    
+    @IBAction func setFollowed(_ sender: Any) {
+        isFollow = !isFollow
+        followedButton.setTitle(isFollow ? "Following" : "Follow", for: .normal)
     }
 }
 
